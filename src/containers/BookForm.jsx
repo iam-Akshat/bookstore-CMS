@@ -10,6 +10,10 @@ const BookForm = () => {
   const [category, setCategory] = useState(categories[0]);
 
   const dispatch = useDispatch();
+
+  const handleInput = (e) => {
+    setTitle(e.target.value);
+  };
   const handleSubmit = () => {
     if (!title) {
       setError(true);
@@ -26,7 +30,7 @@ const BookForm = () => {
   };
   return (
     <div className="book_form">
-      <input type="text" placeholder="Book title" value={title} onChange={(e) => setTitle(e.target.value)} />
+      <input type="text" placeholder="Book title" value={title} onChange={handleInput} />
       {error && <div>Book title required</div>}
       <select onChange={(e) => setCategory(e.target.value)} value={category}>
         {categories.map((cat) => <option key={Math.floor(Math.random() * 10000)}>{cat}</option>)}
