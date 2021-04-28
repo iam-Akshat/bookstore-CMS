@@ -1,17 +1,5 @@
-/* eslint-disable react/self-closing-comp */
 import PropTypes from 'prop-types';
 
-// const Book = ({
-//   id, title, category, handleRemoveBook,
-// }) => (
-//   <tr>
-//     <td>{id}</td>
-//     <td>{title}</td>
-//     <td>{category}</td>
-// eslint-disable-next-line max-len
-//     <td><button type="button" onClick={() => { handleRemoveBook({ id, title, category }); }}> Delete </button></td>
-//   </tr>
-// );
 const Book = ({
   id, title, category, handleRemoveBook,
 }) => (
@@ -29,8 +17,8 @@ const Book = ({
     <div className="prog_indicator">
       <div className="indicator">
         <div className="ring">
-          <div className="outer-ring center"></div>
-          <div className="inner-ring center"></div>
+          <div className="outer-ring center" />
+          <div className="inner-ring center" />
         </div>
       </div>
       <div className="indicator_text">
