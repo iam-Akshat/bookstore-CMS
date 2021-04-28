@@ -7,7 +7,8 @@ const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learnin
 const BookForm = () => {
   const [title, setTitle] = useState('');
   const [error, setError] = useState(null);
-  const [category, setCategory] = useState(categories[0]);
+  const [category, setCategory] = useState('');
+  const [categoryError, setCategoryError] = useState(null);
 
   const dispatch = useDispatch();
 
@@ -19,23 +20,34 @@ const BookForm = () => {
       setError(true);
       return;
     }
+    if (!category) {
+      setCategoryError(true);
+      return;
+    }
     setError(false);
+    setCategoryError(false);
     dispatch(CREATE_BOOK({
       id: Number(Date.now().toString().slice(-4)),
       title,
       category,
     }));
     setTitle('');
-    setCategory(categories[0]);
+    setCategory('');
   };
   return (
     <div className="book_form">
-      <input type="text" placeholder="Book title" value={title} onChange={handleInput} />
-      {error && <div>Book title required</div>}
-      <select onChange={(e) => setCategory(e.target.value)} value={category}>
-        {categories.map((cat) => <option key={Math.floor(Math.random() * 10000)}>{cat}</option>)}
-      </select>
-      <button type="submit" onClick={handleSubmit}>Add book</button>
+      <div className="name_input">
+        <input type="text" placeholder="Book title" value={title} onChange={handleInput} />
+        {error && <div className="error">Book title required</div>}
+      </div>
+      <div className="select_input">
+        <select onChange={(e) => setCategory(e.target.value)} value={category}>
+          <option key={69696} value="" hidden>Category</option>
+          {categories.map((cat) => <option key={Math.floor(Math.random() * 10000)}>{cat}</option>)}
+        </select>
+        {categoryError && <div className="error">Choose a category</div>}
+      </div>
+      <button type="submit" onClick={handleSubmit}>ADD BOOK</button>
     </div>
   );
 };

@@ -31,21 +31,24 @@ const BookList = () => {
     />
   ));
   return (
-    <div className="book_list">
-      <CategoryFilter currentFilter={filter} handleFilterChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th> Book id </th>
-            <th> Title </th>
-            <th> category </th>
-            <th> Action </th>
-          </tr>
-        </thead>
-        <tbody>
-          {booksComponents}
-        </tbody>
-      </table>
+    <div className="book_list_wrapper">
+      <header>
+        <div className="left">
+          <div className="logo">BOOKSTORE CMS</div>
+          <div className="books">BOOKS</div>
+          <div className="category">
+            CATEGORIES
+            <CategoryFilter currentFilter={filter} handleFilterChange={handleFilterChange} />
+          </div>
+        </div>
+
+        <div className="fake_user">
+          A
+        </div>
+      </header>
+      <div className="book_list">
+        {booksComponents}
+      </div>
 
     </div>
   );

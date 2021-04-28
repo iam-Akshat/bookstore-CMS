@@ -1,5 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.book_list_wrapper header {
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  border-bottom: #e8e8e8 1px solid;
+  background-color: #fff;
+}
+
+.book_list_wrapper header .left {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0290ff;
+}
+
+header .books {
+  color: #121212;
+  letter-spacing: 1.9px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+header .category {
+  color: #a0a0a0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  width: 38%;
+  justify-content: space-between;
+}
+
+.book_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book {
+  display: flex;
+  background-color: #fff;
+  padding: 1.75rem 2rem;
+  margin: 1rem 0;
+  width: 80%;
+  max-width: 1200px;
+  justify-content: space-between;
+}
+
+.book .info {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.book_form button {
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: #0290ff;
+  border: none;
+  border-radius: 2px;
+  padding: 0.5rem 1.5rem;
+}
+
+.cur_chapter .cta button {
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: #0290ff;
+  border: none;
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
+}
+
+.info .genre,
+.info .author,
+.info .cta {
+  font-size: 14px;
+}
+
+.info .genre {
+  color: #a0a0a0;
+  font-weight: 500;
+}
+
+.info .title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.info .author {
+  color: #4386bf;
+}
+
+.info .cta {
+  margin-top: 2rem;
+}
+
+.info .cta button {
+  border: none;
+  background-color: #fff;
+  color: #4386bf;
+  padding-right: 0.8rem;
+  border-right: 1px solid #e8e8e8;
+  margin-left: 0.75rem;
+}
+
+.info .cta button:hover {
+  color: #1c507e;
+  text-decoration: underline;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.outer-ring {
+  position: absolute;
+  left: calc(50% - 150px);
+  height: 105px;
+  width: 105px;
+  background-image: linear-gradient(135deg, #307bbe 60%, #379cf6  100%);
+  border-radius: 50%;
+}
+
+.inner-ring {
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 2.5px;
+  left: calc(50% - 149px);
+  height: 98px;
+  width: 98px;
+  background-image: linear-gradient(0deg, #fff, #fff);
+  border-radius: 50%;
+}
+
+.indicator {
+  position: relative;
+}
+
+.indicator_text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 0.8rem;
+  color: #a0a0a0;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.8rem;
+}
+
+.indicator_text .number {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #121212;
+}
+
+.book .cur_chapter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.cur_chapter .cur_chapter_heading {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.cur_chapter .name {
+  color: #121212;
+}
+
+.book_form {
+  display: flex;
+  padding: 2.5rem 8rem;
+  justify-content: space-between;
+}
+
+.book_form .name_input {
+  width: 40%;
+}
+
+.book_form .name_input input {
+  width: 100%;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #e8e8e8;
+}
+
+.book_form .name_input input::placeholder {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #a8a8a8;
+}
+
+.error {
+  color: crimson;
+  position: absolute;
+}
+
+.book_form .select_input {
+  width: 20%;
+}
+
+.book_form .select_input select {
+  width: 100%;
+  padding: 0.2rem 0.5rem;
 }
