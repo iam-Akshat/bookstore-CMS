@@ -46,20 +46,9 @@ const BookList = () => {
           A
         </div>
       </header>
-
-      <table>
-        <thead>
-          <tr>
-            <th> Book id </th>
-            <th> Title </th>
-            <th> category </th>
-            <th> Action </th>
-          </tr>
-        </thead>
-        <tbody>
-          {booksComponents}
-        </tbody>
-      </table>
+      <div className="book_list">
+        {booksComponents}
+      </div>
 
     </div>
   );
