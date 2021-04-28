@@ -1,5 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', serif;
+}
+
+.book_list_wrapper header {
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  border-bottom: #e8e8e8 1px solid;
+}
+
+.book_list_wrapper header .left {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0290ff;
+}
+
+header .books {
+  color: #121212;
+  letter-spacing: 1.9px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+header .category {
+  color: #a0a0a0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  width: 38%;
+  justify-content: space-between;
 }

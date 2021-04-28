@@ -31,8 +31,22 @@ const BookList = () => {
     />
   ));
   return (
-    <div className="book_list">
-      <CategoryFilter currentFilter={filter} handleFilterChange={handleFilterChange} />
+    <div className="book_list_wrapper">
+      <header>
+        <div className="left">
+          <div className="logo">BOOKSTORE CMS</div>
+          <div className="books">BOOKS</div>
+          <div className="category">
+            CATEGORIES
+            <CategoryFilter currentFilter={filter} handleFilterChange={handleFilterChange} />
+          </div>
+        </div>
+
+        <div className="fake_user">
+          A
+        </div>
+      </header>
+
       <table>
         <thead>
           <tr>
